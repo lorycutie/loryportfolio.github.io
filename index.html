@@ -7,237 +7,544 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
+<!-- LINK TO CSS -->
+<link rel="stylesheet" href="style.css">
 
-/* THEME VARIABLES */
-:root{
-    --bg: #ffffff;
-    --text: #1a1a2e;
-    --card: rgba(0,0,0,0.05);
-    --accent: #ff7edb;
-}
-
-/* DARK MODE */
-body.dark{
-    --bg: linear-gradient(135deg, #1a1a2e, #16213e);
-    --text: #ffffff;
-    --card: rgba(255,255,255,0.05);
-    --accent: #ffb6ff;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-    transition: all 0.3s ease;
-}
-
-body{
-    background: var(--bg);
-    color: var(--text);
-    scroll-behavior:smooth;
-}
-
-/* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 50px;
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.05);
-}
-
-nav h1{
-    color: var(--accent);
-}
-
-nav a{
-    color: var(--text);
-    text-decoration:none;
-    margin-left:20px;
-}
-
-nav a:hover{
-    color: var(--accent);
-}
-
-/* TOGGLE BUTTON */
-.toggle-btn{
-    cursor:pointer;
-    padding:8px 12px;
-    border-radius:20px;
-    border:none;
-    background: var(--accent);
-    color:white;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:3rem;
-    background:linear-gradient(90deg,var(--accent),#9bf6ff);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.hero p{
-    margin-top:10px;
-    opacity:0.8;
-}
-
-/* SECTION */
-section{
-    padding:100px 10%;
-}
-
-.section-title{
-    font-size:2rem;
-    margin-bottom:40px;
-    color: var(--accent);
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:20px;
-}
-
-/* CARD */
-.card{
-    background: var(--card);
-    border-radius:15px;
-    padding:20px;
-    backdrop-filter: blur(10px);
-}
-
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow:0 0 20px var(--accent);
-}
-
-.card img{
-    width:100%;
-    border-radius:10px;
-}
-
-/* ABOUT */
-.about{
-    display:flex;
-    flex-wrap:wrap;
-    gap:30px;
-}
-
-.about div{
-    flex:1;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-    opacity:0.6;
-}
-
-</style>
 </head>
 
 <body class="dark">
 
-<!-- NAVBAR -->
 <nav>
     <h1>Lory</h1>
     <div>
-        <a href="#about">About</a>
+        <a href="#home">Home</a>
+        <a href="#skils">Skills</a>
         <a href="#works">Works</a>
         <a href="#contact">Contact</a>
-        <button class="toggle-btn" onclick="toggleMode()">🌙</button>
     </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Hi, I'm Lory 🎨</h1>
-    <p>Traditional • Digital • Creative Soul</p>
-    <p>Turning imagination into art & stories</p>
+<section class="home">
+
+    <!-- LEFT: PHOTO COLLAGE -->
+    <div class="home-left">
+        <div class="collage">
+            <img src="img/img/img2.png">
+            <img src="img/img/img1.jpg">
+            <img src="img/img/img3.png">
+        </div>
+    </div>
+
+    <!-- RIGHT: INFO -->
+    <div class="home-right">
+        <h1>Hi, I'm <span>Lory</span> 🎨</h1>
+
+        <p class="desc">
+            I am Lorelyn Doydora, 22, an aspiring teacher who is passionate about learning and sharing knowledge with others. I enjoy exploring different fields and continuously expanding my understanding, especially in languages, as I find joy in connecting with different cultures and ways of communication.
+            <br>
+            Aside from academics, I have a strong love for creativity. I enjoy doing arts and crafts, from traditional drawing to digital design and handmade creations. I also have strong documentation and organizational skills, developed through my academic and internship experiences, where I handled reports, files, and structured information clearly and efficiently.
+        </p>
+
+        <div class="info">
+            <p><strong>Age:</strong> 22</p>
+            <p><strong>Languages:</strong> Filipino, English, Korean (basic), Thai (basic)</p>
+            <p><strong>Interests:</strong> Art, UI Design, Crochet, Travel, Foreign Languages, Education</p>
+        </div>
+        <br>
+
+        <a href="DOYDORA NEW RESUME.pdf" download class="resume-btn">
+            Download Resume
+        </a>
+    </div>
+
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about">
-        <div>
-            <p>
-                I'm Lory, a BSIT graduate with a passion for creativity.
-                I love expressing myself through traditional drawings,
-                digital art, and handmade crafts like crochet flowers.
-            </p>
+</section>
+<section class="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card computer">
+            <h3>💻 Technical</h3>
+            <ul>
+                <li>HTML / CSS</li>
+                <li>Data Encoding</li>
+                <li>Documentation</li>
+                <li>Computer Skills</li>
+            </ul>
         </div>
-        <div>
-            <p>
-                ✦ Skills:
-                <br>• Traditional Drawing
-                <br>• Digital Art
-                <br>• Graphic Design
-            </p>
+
+        <div class="skill-card admin">
+            <h3>📋 Administrative</h3>
+            <ul>
+                <li>File Management</li>
+                <li>Record Keeping</li>
+                <li>Organization</li>
+                <li>Administrative Support</li>
+            </ul>
         </div>
+
+        <div class="skill-card soft">
+            <h3>🧠 Professional</h3>
+            <ul>
+                <li>Time Management</li>
+                <li>Attention to Detail</li>
+                <li>Communication</li>
+                <li>Willingness to Learn</li>
+            </ul>
+        </div>
+
+        <div class="skill-card teaching">
+            <h3>📚 Teaching</h3>
+            <ul>
+                <li>Tutoring</li>
+                <li>Student Support</li>
+                <li>Instruction & Facilitation</li>
+            </ul>
+        </div>
+
+        <div class="skills-bottom">
+    <div class="skill-card artistic">
+            <h3>🎨 Artistic</h3>
+            <ul>
+                <li>Traditional Drawing</li>
+                <li>Digital Art</li>
+                <li>Graphic Design</li>
+                <li>Photo Editing</li>
+                <li>Crochet & Crafts</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
-<!-- WORKS -->
+<section id="ui">
+    <h2 class="section-title">UI Showcase</h2>
+
+    <div class="ui-grid">
+
+        <!-- MOBILE APP -->
+        <div class="ui-card">
+    <h3>Mobile App #1</h3>
+
+    <div class="mobile-strip">
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/LogIn (1).png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Signup (1).png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Homepage.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Search for Restaurant.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Order Food.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Order Food (1).png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Order Summary.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Order Summary (1).png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Select Payment Method.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Add Location.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Order Summary (2).png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Order Summary (3).png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/YuuMeal/Track Order.png" onclick="openViewerFromUI(this)">
+        </div>
+
+    </div>
+
+    <p>Food ordering mobile UI</p>
+</div>
+
+<div class="ui-card">
+    <h3>Mobile App #2</h3>
+
+    <div class="mobile-strip">
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 11.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 12.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 3.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 9.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 8.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 7.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 10.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 4.png" onclick="openViewerFromUI(this)">
+        </div>
+
+        <div class="phone-item">
+            <img src="img/ui/PHindMe/Android Large - 5.png" onclick="openViewerFromUI(this)">
+        </div>
+    </div>
+
+    <p>Search for Missing Person mobile UI</p>
+</div>
+
+
+        <!-- WEB APP -->
+        <div class="ui-card">
+    <h3>Web Page Design #1</h3>
+
+    <div class="laptop">
+        <div class="screen">
+            <img src="img/UI/PlantShop/MacBook Pro 16_ - 1.png">
+        </div>
+    </div>
+
+    <p>Plant shop webpage UI</p>
+</div>
+
+
+<div class="ui-card">
+    <h3>Web Page Design #2</h3>
+
+    <div class="web-strip">
+
+        <!-- PAGE 1 -->
+        <div class="web-item">
+            <div class="laptop">
+                <div class="screen">
+                    <img src="img/UI/PHindMe/Desktop - 1.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="web-item">
+            <div class="laptop">
+                <div class="screen">
+                    <img src="img/UI/PHindMe/Desktop - 2.png">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <p>PhindMe Web UI</p>
+</div>
+
+</section>
+
 <section id="works">
     <h2 class="section-title">My Works</h2>
 
     <div class="grid">
-        <div class="card">
-            <img src="images/traditional1.jpg">
-            <p>Traditional Art</p>
+
+        <div class="folder" onclick="openGallery('traditional')">
+            📁 Traditional Art
         </div>
-        <div class="card">
-            <img src="images/digital1.jpg">
-            <p>Digital Art</p>
+
+        <div class="folder" onclick="openGallery('digital')">
+            📁 Digital Art
         </div>
-        <div class="card">
-            <img src="images/design1.jpg">
-            <p>Design</p>
+
+        <div class="folder" onclick="openGallery('photo')">
+            📁 Photo Editing
         </div>
+
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- GALLERY MODAL -->
+<div id="galleryModal" class="modal">
+    <span class="close" onclick="closeGallery()">×</span>
+    <div id="galleryContent" class="modal-content"></div>
+</div>
+
+<!-- IMAGE VIEWER -->
+<div id="imageViewer" class="viewer">
+    <span class="close" onclick="closeViewer()">×</span>
+    <span class="nav prev" onclick="changeImage(-1)">❮</span>
+    <img id="viewerImg">
+    <span class="nav next" onclick="changeImage(1)">❯</span>
+</div>
+
+<section id="contact" class="contact">
     <h2 class="section-title">Contact Me</h2>
-    <p>Email: your@email.com</p>
+
+    <div class="contact-grid">
+
+        <!-- EMAIL -->
+        <div class="contact-card email">
+            <h3>📧 Email</h3>
+            <p>doydora.lorelyn1@gmail.com</p>
+        </div>
+
+        <!-- PHONE -->
+        <div class="contact-card iphone">
+            <h3>📱 Phone</h3>
+            <p>09949880028</p>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="contact-card location">
+            <h3>📍 Location</h3>
+            <p>Novaliches, Quezon City</p>
+        </div>
+
+        <!-- SOCIALS -->
+<div class="contact-card socials">
+    <h3>🌐 Socials</h3>
+
+    <div class="social-links">
+
+        <a href="https://web.facebook.com/lorelyn.doydora" target="_blank" class="social-btn facebook">
+            📘 Facebook
+        </a>
+
+        <a href="https://www.instagram.com/loryiee/" target="_blank" class="social-btn instagram">
+            📸 Instagram
+        </a>
+
+        <a href="https://www.linkedin.com/in/doydora-lorelyn-7280353b7" target="_blank" class="social-btn linkedin">
+            💼 LinkedIn
+        </a>
+
+    </div>
+</div>
+
+        <!-- RESUME -->
+        <div class="contact-card resume">
+            <h3>📄 Resume</h3>
+            <a href="DOYDORA NEW RESUME.pdf" download class="resume-btn">
+                Download CV
+            </a>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-    <p>Made with 💜 by Lory</p>
+    <p>Made by Lory</p>
 </footer>
 
 <script>
-function toggleMode(){
-    document.body.classList.toggle("dark");
 
-    const btn = document.querySelector(".toggle-btn");
-    if(document.body.classList.contains("dark")){
-        btn.textContent = "🌙";
-    } else {
-        btn.textContent = "☀️";
-    }
+/* GLOBAL VARIABLES (IMPORTANT) */
+let currentImages = [];
+let currentIndex = 0;
+
+const galleries = {
+    traditional: [
+        "img/Traditional Art/tart1.jpg",
+        "img/Traditional Art/tart2.jpg",
+        "img/Traditional Art/tart3.jpg",
+        "img/Traditional Art/tart4.jpg",
+        "img/Traditional Art/tart5.jpg",
+        "img/Traditional Art/tart6.jpg",
+        "img/Traditional Art/tart7.jpg",
+        "img/Traditional Art/tart8.jpg",
+        "img/Traditional Art/tart9.jpg",
+        "img/Traditional Art/tart10.jpg",
+        "img/Traditional Art/tart11.jpg",
+        "img/Traditional Art/tart49.jpg",
+        "img/Traditional Art/tart50.jpg",
+        "img/Traditional Art/tart51.jpg",
+        "img/Traditional Art/tart52.jpg",
+        "img/Traditional Art/tart53.jpg",
+        "img/Traditional Art/tart54.jpg",
+        "img/Traditional Art/tart55.jpg",
+        "img/Traditional Art/tart56.jpg",
+        "img/Traditional Art/tart57.jpg",
+        "img/Traditional Art/tart58.jpg",
+        "img/Traditional Art/tart59.jpg",
+        "img/Traditional Art/tart60.jpg",
+        "img/Traditional Art/tart61.jpg",
+        "img/Traditional Art/tart62.jpg",
+        "img/Traditional Art/tart63.jpg",
+        "img/Traditional Art/tart64.jpg",
+        "img/Traditional Art/tart65.jpg",
+        "img/Traditional Art/tart66.jpg",
+        "img/Traditional Art/tart67.jpg",
+        "img/Traditional Art/tart68.jpg",
+        "img/Traditional Art/tart69.jpg",
+        "img/Traditional Art/tart70.jpg",
+        "img/Traditional Art/tart71.jpg",
+        "img/Traditional Art/tart72.jpg",
+        "img/Traditional Art/tart73.jpg",
+        "img/Traditional Art/tart74.jpg",
+        "img/Traditional Art/tart75.jpg",
+        "img/Traditional Art/tart76.jpg",
+        "img/Traditional Art/tart77.jpg",
+        "img/Traditional Art/tart12.jpg",
+        "img/Traditional Art/tart13.jpg",
+        "img/Traditional Art/tart14.jpg",
+        "img/Traditional Art/tart15.jpg",
+        "img/Traditional Art/tart16.jpg",
+        "img/Traditional Art/tart17.jpg",
+        "img/Traditional Art/tart18.jpg",
+        "img/Traditional Art/tart19.jpg",
+        "img/Traditional Art/tart20.jpg",
+        "img/Traditional Art/tart21.jpg",
+        "img/Traditional Art/tart22.jpg",
+        "img/Traditional Art/tart23.jpg",
+        "img/Traditional Art/tart24.jpg",
+        "img/Traditional Art/tart25.jpg",
+        "img/Traditional Art/tart26.jpg",
+        "img/Traditional Art/tart27.jpg",
+        "img/Traditional Art/tart28.jpg",
+        "img/Traditional Art/tart29.jpg",
+        "img/Traditional Art/tart30.jpg",
+        "img/Traditional Art/tart31.jpg",
+        "img/Traditional Art/tart32.jpg",
+        "img/Traditional Art/tart33.jpg",
+        "img/Traditional Art/tart34.jpg",
+        "img/Traditional Art/tart35.jpg",
+        "img/Traditional Art/tart36.jpg",
+        "img/Traditional Art/tart37.jpg",
+        "img/Traditional Art/tart38.jpg",
+        "img/Traditional Art/tart39.jpg",
+        "img/Traditional Art/tart40.jpg",
+        "img/Traditional Art/tart41.jpg",
+        "img/Traditional Art/tart42.jpg",
+        "img/Traditional Art/tart43.jpg",
+        "img/Traditional Art/tart44.jpg",
+        "img/Traditional Art/tart45.jpg",
+        "img/Traditional Art/tart46.jpg",
+        "img/Traditional Art/tart47.jpg",
+        "img/Traditional Art/tart48.jpg",
+        "img/Traditional Art/tart78.jpg",
+        "img/Traditional Art/tart79.jpg",
+        "img/Traditional Art/tart80.jpg",
+        "img/Traditional Art/tart81.jpg",
+        "img/Traditional Art/tart82.jpg",
+        "img/Traditional Art/tart83.jpg",
+        "img/Traditional Art/tart84.jpg",
+        "img/Traditional Art/tart85.jpg"
+    ],
+    digital: [
+        "img/Digital Art/dart1.jpg",
+        "img/Digital Art/dart2.jpg"
+    ],
+    photo: [
+        "img/Photo Editing/PE1.jpg",
+        "img/Photo Editing/PE2.jpg",
+        "img/Photo Editing/PE3.jpg",
+        "img/Photo Editing/PE4.jpg",
+        "img/Photo Editing/PE5.jpg",
+        "img/Photo Editing/PE6.jpg",
+        "img/Photo Editing/PE7.jpg",
+        "img/Photo Editing/PE8.jpg",
+        "img/Photo Editing/PE9.jpg"
+    ]
+};
+
+/* OPEN GALLERY */
+function openGallery(type){
+    const modal = document.getElementById("galleryModal");
+    const content = document.getElementById("galleryContent");
+
+    content.innerHTML = "";
+    currentImages = galleries[type];
+
+    currentImages.forEach((img, index) => {
+        const image = document.createElement("img");
+        image.src = img;
+        image.onclick = () => openViewer(index);
+        content.appendChild(image);
+    });
+
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden"; // 🚫 stop background scroll
 }
-</script>
 
+function closeGallery(){
+    document.getElementById("galleryModal").style.display = "none";
+    document.body.style.overflow = "auto"; // ✅ restore scroll
+}
+
+/* OPEN IMAGE VIEWER */
+function openViewer(index){
+    currentIndex = index;
+    document.getElementById("viewerImg").src = currentImages[index];
+    document.getElementById("imageViewer").style.display = "flex";
+}
+
+/* CLOSE VIEWER */
+function closeViewer(){
+    document.getElementById("imageViewer").style.display = "none";
+}
+
+/* NEXT / PREV IMAGE */
+function changeImage(direction){
+    currentIndex += direction;
+
+    if(currentIndex < 0) currentIndex = currentImages.length - 1;
+    if(currentIndex >= currentImages.length) currentIndex = 0;
+
+    document.getElementById("viewerImg").src = currentImages[currentIndex];
+}
+
+function slideWeb(btn, direction){
+    const laptop = btn.parentElement;
+    const slider = laptop.querySelector(".web-slider");
+
+    const images = slider.querySelectorAll("img");
+    let index = slider.getAttribute("data-index") || 0;
+
+    index = parseInt(index) + direction;
+
+    if(index < 0) index = 0;
+    if(index >= images.length) index = images.length - 1;
+
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    slider.setAttribute("data-index", index);
+}
+
+
+
+</script>
 </body>
 </html>
