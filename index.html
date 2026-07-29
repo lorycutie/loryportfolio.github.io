@@ -485,6 +485,7 @@ const galleries = {
 function openGallery(type){
     const modal = document.getElementById("galleryModal");
     const content = document.getElementById("galleryContent");
+    document.body.style.overflow = "hidden"; // stop scroll
 
     content.innerHTML = "";
     currentImages = galleries[type];
@@ -503,6 +504,8 @@ function openGallery(type){
 function closeGallery(){
     document.getElementById("galleryModal").style.display = "none";
     document.body.style.overflow = "auto"; // ✅ restore scroll
+    document.getElementById("galleryModal").style.display = "none";
+    document.body.style.overflow = "auto"; // restore scroll
 }
 
 /* OPEN IMAGE VIEWER */
